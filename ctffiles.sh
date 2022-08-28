@@ -37,4 +37,4 @@ msg "Creating file for you"
 alien_ls $path > $name.txt
 sed -i "s+^+alien://$path/+" "$name.txt"
 
-msg "DONE"
+echo "Number of ctf root files: $(wc -l < $name.txt)"
