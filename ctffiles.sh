@@ -36,6 +36,7 @@ msg "Creating file for you"
 
 alien_ls $path > $name.txt
 sed -i "s+^+alien://$path/+" "$name.txt"
+msg "Checking grid path."
 
 if grep -Rq "rawtf" $name.txt
 then
@@ -45,6 +46,7 @@ then
   [2] keep the rawtf in the same file \n
   [3] create a new file for rawtf files"
   read -p " Select [1] [2] [3] " -r ans
+
 
   if [ "$ans" == "1" ] || [ "$ans" == "" ];
   then
